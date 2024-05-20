@@ -83,9 +83,6 @@ sudo apt update && sudo apt install terraform
 You have successfully installed Terraform on your Windows or Linux operating system. You can now proceed to create and manage your infrastructure as code using Terraform. For more information on how to use Terraform, refer to the [official documentation](https://www.terraform.io/docs/index.html).
 
 ---
-
-Feel free to reach out if you encounter any issues or have any questions. Happy coding!
-
 ## Terraform providers
 
 HashiCorp and the Terraform community have already written thousands of providers to manage many different types of resources and services. You can find all publicly available providers on the Terraform Registry, including Amazon Web Services (AWS), Azure, Google Cloud Platform (GCP), Kubernetes, Helm, GitHub, Splunk, DataDog, and many more.
