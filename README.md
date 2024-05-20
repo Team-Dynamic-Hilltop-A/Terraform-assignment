@@ -20,12 +20,98 @@ The core Terraform workflow consists of three stages:
 
 ## Installing Terraform
 
-To install Terraform, follow these steps:
+# Terraform Installation Guide
 
-- Visit the Terraform website and download the appropriate package for your operating system.
-- Extract the downloaded package to a directory.
-- Add the Terraform binary to your system's PATH environment variable.
-- Once installed, you can verify the installation by running ``terraform version`` in your terminal.
+This guide will walk you through the steps to install Terraform on both Windows and Linux operating systems.
+
+## Installation on Windows
+
+### Prerequisites
+
+1. **Operating System**: Windows 7 or later.
+2. **Permissions**: Administrator privileges.
+
+### Steps
+
+1. **Download Terraform**
+
+   Visit the [Terraform download page](https://www.terraform.io/downloads.html) and download the appropriate zip archive for your Windows version.
+
+2. **Extract the Zip Archive**
+
+   Extract the downloaded zip archive to a directory of your choice. For example, `C:\terraform`.
+
+3. **Add Terraform to PATH**
+
+   To use Terraform from any command prompt, you need to add it to your system's PATH.
+
+   1. Open the Start Search, type in "env", and select "Edit the system environment variables".
+   2. In the System Properties window, click on the "Environment Variables" button.
+   3. In the Environment Variables window, under the "System variables" section, find the "Path" variable and select it. Click the "Edit" button.
+   4. In the Edit Environment Variable window, click the "New" button and add the path to the directory where you extracted Terraform. For example, `C:\terraform`.
+   5. Click "OK" on all windows to apply the changes.
+
+4. **Verify Installation**
+
+   Open a new command prompt and type `terraform -v` to verify the installation. You should see the installed version of Terraform.
+
+## Installation on Linux
+
+### Prerequisites
+
+1. **Operating System**: Any modern Linux distribution.
+2. **Permissions**: Root or sudo privileges.
+
+### Steps
+
+1. **Download Terraform**
+
+   You can use `wget` or `curl` to download the Terraform binary. Replace `VERSION` with the latest version number (e.g., `1.0.11`).
+
+   ```bash
+   wget https://releases.hashicorp.com/terraform/VERSION/terraform_VERSION_linux_amd64.zip
+   ```
+
+2. **Install Unzip (if not installed)**
+
+   You need `unzip` to extract the Terraform binary. Install it using your package manager. For example, on Debian-based systems:
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install unzip
+   ```
+
+   On Red Hat-based systems:
+
+   ```bash
+   sudo yum install unzip
+   ```
+
+3. **Extract the Zip Archive**
+
+   ```bash
+   unzip terraform_VERSION_linux_amd64.zip
+   ```
+
+4. **Move the Binary to a Directory in your PATH**
+
+   Move the extracted `terraform` binary to a directory included in your system's PATH, such as `/usr/local/bin`.
+
+   ```bash
+   sudo mv terraform /usr/local/bin/
+   ```
+
+5. **Verify Installation**
+
+   Open a new terminal and type `terraform -v` to verify the installation. You should see the installed version of Terraform.
+
+## Conclusion
+
+You have successfully installed Terraform on your Windows or Linux operating system. You can now proceed to create and manage your infrastructure as code using Terraform. For more information on how to use Terraform, refer to the [official documentation](https://www.terraform.io/docs/index.html).
+
+---
+
+Feel free to reach out if you encounter any issues or have any questions. Happy coding!
 
 ## Terraform providers
 
