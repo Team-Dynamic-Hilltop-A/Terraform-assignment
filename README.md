@@ -69,39 +69,12 @@ This guide will walk you through the steps to install Terraform on both Windows 
    You can use `wget` or `curl` to download the Terraform binary. Replace `VERSION` with the latest version number (e.g., `1.0.11`).
 
    ```bash
-   wget https://releases.hashicorp.com/terraform/VERSION/terraform_VERSION_linux_amd64.zip
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
    ```
 
-2. **Install Unzip (if not installed)**
-
-   You need `unzip` to extract the Terraform binary. Install it using your package manager. For example, on Debian-based systems:
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install unzip
-   ```
-
-   On Red Hat-based systems:
-
-   ```bash
-   sudo yum install unzip
-   ```
-
-3. **Extract the Zip Archive**
-
-   ```bash
-   unzip terraform_VERSION_linux_amd64.zip
-   ```
-
-4. **Move the Binary to a Directory in your PATH**
-
-   Move the extracted `terraform` binary to a directory included in your system's PATH, such as `/usr/local/bin`.
-
-   ```bash
-   sudo mv terraform /usr/local/bin/
-   ```
-
-5. **Verify Installation**
+1. **Verify Installation**
 
    Open a new terminal and type `terraform -v` to verify the installation. You should see the installed version of Terraform.
 
