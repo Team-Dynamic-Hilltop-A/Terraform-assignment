@@ -32,7 +32,6 @@ This guide will walk you through the steps to install Terraform on both Windows 
 2. **Permissions**: Administrator privileges.
 
 ### Steps
-
 1. **Download Terraform**
 
    Visit the [Terraform download page](https://www.terraform.io/downloads.html) and download the appropriate zip archive for your Windows version.
